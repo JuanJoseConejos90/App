@@ -8,7 +8,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace deliveryAppWebApi.Controllers
@@ -61,7 +60,7 @@ namespace deliveryAppWebApi.Controllers
         public async Task<IActionResult> UpdateProduct(ProductDto ProductDto)
         {
             var product = _mapper.Map<Product>(ProductDto);
-            var dataAsync = await _IProduct.UpdatetProduct(product);
+            var dataAsync = await _IProduct.UpdateProduct(product);
             var response = dataAsync ? ApiResponse<Boolean>.Success(dataAsync) : ApiResponse<Boolean>.Fail(_config["msgs:ErrorRequest"].ToString());
             return Ok(response);
         }

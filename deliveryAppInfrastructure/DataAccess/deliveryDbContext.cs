@@ -36,8 +36,6 @@ namespace deliveryAppInfrastructure.DataAccess
 
             modelBuilder.Entity<Po>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Cod).IsUnicode(false);
 
                 entity.Property(e => e.CreatedBy).IsUnicode(false);
@@ -45,8 +43,6 @@ namespace deliveryAppInfrastructure.DataAccess
 
             modelBuilder.Entity<Product>(entity =>
             {
-                entity.Property(e => e.Id).ValueGeneratedNever();
-
                 entity.Property(e => e.Cod).IsUnicode(false);
 
                 entity.Property(e => e.CreatedBy).IsUnicode(false);

@@ -68,7 +68,7 @@ namespace deliveryAppInfrastructure.Repositories
             return resp;
         }
 
-        public async Task<bool> UpdatetProduct(Product req)
+        public async Task<bool> UpdateProduct(Product req)
         {
             Boolean resp = false;
 

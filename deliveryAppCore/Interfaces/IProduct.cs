@@ -10,7 +10,7 @@ namespace deliveryAppCore.Interfaces
         Task<IEnumerable<Product>> getAllProducts();
         Task<Product> getProduct(int id);
         Task<Boolean> InsertProduct(Product req);
-        Task<Boolean> UpdatetProduct(Product req);
+        Task<Boolean> UpdateProduct(Product req);
         Task<Boolean> DeletetProduct(int id);
     }
 }

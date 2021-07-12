@@ -11,6 +11,8 @@ using Microsoft.IdentityModel.Tokens;
 using deliveryAppInfrastructure.DataAccess;
 using deliveryAppCore.Interfaces;
 using deliveryAppInfrastructure.Repositories;
+using AppInfrastructure.Repositories;
+using AppCore.Interfaces;
 
 namespace deliveryAppWebApi
 {
@@ -66,8 +68,9 @@ namespace deliveryAppWebApi
 
             services.AddTransient<ILogin, LoginRepository>();
             services.AddTransient<IProduct, ProductRepository>();
+            services.AddTransient<IPO, PoRepository>();
 
-            
+
             #endregion
 
             #region Mapper
